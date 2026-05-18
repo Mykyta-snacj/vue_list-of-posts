@@ -1,11 +1,24 @@
-<script setup lang="ts"></script>
+<script lang="ts">
+//components
+import MainNavbar from './components/MainNavbar.vue'
+import PostsSection from './components/PostsSection.vue'
+
+export default {
+  components: {
+    MainNavbar,
+    PostsSection,
+  },
+}
+</script>
 
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
-</template>
+  <div id="root">
+    <MainNavbar />
 
-<style scoped></style>
+    <main class="section">
+      <div class="container">
+        <PostsSection />
+      </div>
+    </main>
+  </div>
+</template>
